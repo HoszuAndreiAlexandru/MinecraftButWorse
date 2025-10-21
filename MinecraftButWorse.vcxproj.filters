@@ -10,16 +10,55 @@
     <Filter Include="Source\Shaders\Utils">
       <UniqueIdentifier>{29cd5505-6e1f-4c81-93ee-ecf6da92015c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Render">
+    <Filter Include="Source\Window">
+      <UniqueIdentifier>{0588d5aa-24e8-4abf-8a9f-20501eb62d03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ResourceManager">
+      <UniqueIdentifier>{48ee8c75-57aa-46af-af07-dca8b4cc7051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Renderer">
       <UniqueIdentifier>{011d89ce-c323-4187-bc03-d249999fa7ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Renderer\OpenGL">
+      <UniqueIdentifier>{7f5ed72e-15bc-4880-98d7-dd5b54bfe502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{34a7232d-52ff-491d-818c-207bfe53472c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Shaders\Utils\shader.cpp">
+    <ClCompile Include="Source\Shaders\Utils\Shader.cpp">
       <Filter>Source\Shaders\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Window\Input.cpp">
+      <Filter>Source\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Window\Window.cpp">
+      <Filter>Source\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ResourceManager\AudioFile.cpp">
+      <Filter>Source\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ResourceManager\Image.cpp">
+      <Filter>Source\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ResourceManager\Model.cpp">
+      <Filter>Source\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ResourceManager\ResourceManager.cpp">
+      <Filter>Source\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\RenderManager.cpp">
+      <Filter>Source\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\OpenGL\OpenGLRenderer.cpp">
+      <Filter>Source\Renderer\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ResourceManager\SaveFileManager.cpp">
+      <Filter>Source\ResourceManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -31,8 +70,35 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Shaders\Utils\shader.hpp">
+    <ClInclude Include="Source\Shaders\Utils\Shader.hpp">
       <Filter>Source\Shaders\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Window\Input.hpp">
+      <Filter>Source\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Window\Window.hpp">
+      <Filter>Source\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ResourceManager\AudioFile.hpp">
+      <Filter>Source\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ResourceManager\Image.hpp">
+      <Filter>Source\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ResourceManager\Model.hpp">
+      <Filter>Source\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ResourceManager\ResourceManager.hpp">
+      <Filter>Source\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\RenderManager.hpp">
+      <Filter>Source\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\OpenGL\OpenGLRenderer.hpp">
+      <Filter>Source\Renderer\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ResourceManager\SaveFileManager.hpp">
+      <Filter>Source\ResourceManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

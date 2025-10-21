@@ -12,14 +12,32 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp" />
-    <ClCompile Include="Source\Shaders\Utils\shader.cpp" />
+    <ClCompile Include="Source\Renderer\OpenGL\OpenGLRenderer.cpp" />
+    <ClCompile Include="Source\Renderer\RenderManager.cpp" />
+    <ClCompile Include="Source\ResourceManager\AudioFile.cpp" />
+    <ClCompile Include="Source\ResourceManager\Image.cpp" />
+    <ClCompile Include="Source\ResourceManager\Model.cpp" />
+    <ClCompile Include="Source\ResourceManager\ResourceManager.cpp" />
+    <ClCompile Include="Source\ResourceManager\SaveFileManager.cpp" />
+    <ClCompile Include="Source\Shaders\Utils\Shader.cpp" />
+    <ClCompile Include="Source\Window\Input.cpp" />
+    <ClCompile Include="Source\Window\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Source\Shaders\SimpleFragmentShader.frag" />
     <None Include="Source\Shaders\SimpleVertexShader.vert" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Shaders\Utils\shader.hpp" />
+    <ClInclude Include="Source\Renderer\OpenGL\OpenGLRenderer.hpp" />
+    <ClInclude Include="Source\Renderer\RenderManager.hpp" />
+    <ClInclude Include="Source\ResourceManager\AudioFile.hpp" />
+    <ClInclude Include="Source\ResourceManager\Image.hpp" />
+    <ClInclude Include="Source\ResourceManager\Model.hpp" />
+    <ClInclude Include="Source\ResourceManager\ResourceManager.hpp" />
+    <ClInclude Include="Source\ResourceManager\SaveFileManager.hpp" />
+    <ClInclude Include="Source\Shaders\Utils\Shader.hpp" />
+    <ClInclude Include="Source\Window\Input.hpp" />
+    <ClInclude Include="Source\Window\Window.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E8D7D48F-7AB1-4260-BCEC-8CC11D9FBC01}</ProjectGuid>

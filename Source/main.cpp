@@ -13,7 +13,7 @@
 #include "glm\gtc\type_ptr.hpp"
 
 // Include util for compiling and loading shaders
-#include "Shaders\Utils\shader.hpp"
+#include "Shaders\Utils\Shader.hpp"
 
 // "Global" variables
 GLFWwindow* window;
