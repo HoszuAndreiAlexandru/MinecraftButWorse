@@ -17,8 +17,7 @@
 
 // "Global" variables
 GLFWwindow* window;
-const int width = 1024, height = 1024;
-float scaleX = 1.5f, scaleY = 0.5f, scaleZ = 0;
+const int width = 1280, height = 720;
 
 void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
 {
