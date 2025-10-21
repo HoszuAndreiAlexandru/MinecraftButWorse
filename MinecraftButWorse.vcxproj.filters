@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{2c25eb3b-25c1-4988-aea3-e61cd0384847}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Shaders">
+      <UniqueIdentifier>{30ec921b-4b5e-4a88-84e0-074d1a0d0e5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Shaders\Utils">
+      <UniqueIdentifier>{29cd5505-6e1f-4c81-93ee-ecf6da92015c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Render">
+      <UniqueIdentifier>{011d89ce-c323-4187-bc03-d249999fa7ca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Shaders\Utils\shader.cpp">
+      <Filter>Source\Shaders\Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Shaders\SimpleFragmentShader.frag">
+      <Filter>Source\Shaders</Filter>
+    </None>
+    <None Include="Source\Shaders\SimpleVertexShader.vert">
+      <Filter>Source\Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Shaders\Utils\shader.hpp">
+      <Filter>Source\Shaders\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
