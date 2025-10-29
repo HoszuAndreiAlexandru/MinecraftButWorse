@@ -83,7 +83,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(ProjectDir)Build\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)Build\Intermediate\$(Configuration)\</IntDir>
-    <IncludePath>$(ProjectDir)Externals\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)Externals\include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -96,14 +96,15 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>Externals\freeglut;Externals\glew;Externals\glfw</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;freeglut.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Externals\libs</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;freeglut.lib;glew32.lib;glfw3.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <TargetMachine>NotSet</TargetMachine>
       <IgnoreSpecificDefaultLibraries>msvcrt</IgnoreSpecificDefaultLibraries>
     </Link>
     <PreBuildEvent>
-      <Command>copy "$(ProjectDir)Externals\freeglut\freeglut.dll" "$(ProjectDir)Build\$(ConfigurationName)"
-copy "$(ProjectDir)Externals\glew\glew32.dll" "$(ProjectDir)\Build\$(ConfigurationName)"
+      <Command>copy "$(ProjectDir)Externals\include\freeglut\freeglut.dll" "$(ProjectDir)Build\$(ConfigurationName)"
+copy "$(ProjectDir)Externals\include\glew\glew32.dll" "$(ProjectDir)\Build\$(ConfigurationName)"
+copy "$(ProjectDir)Externals\bin\soft_oal.dll" "$(ProjectDir)\Build\$(ConfigurationName)soft_oal.dll"
 </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
