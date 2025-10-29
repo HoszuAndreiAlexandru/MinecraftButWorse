@@ -29,6 +29,11 @@ RenderManager::RenderManager(RenderAPI renderApi)
 	}
 }
 
+RenderManager::~RenderManager()
+{
+	currentRenderer->~AbstractRenderer();
+}
+
 void RenderManager::renderFrame(double deltaTime, GameManager& gameManager)
 {
 	// Placeholder for rendering logic based on the selected API
@@ -49,9 +54,4 @@ void RenderManager::renderFrame(double deltaTime, GameManager& gameManager)
 	default:
 		break;
 	}
-}
-
-RenderManager::~RenderManager()
-{
-	currentRenderer->~AbstractRenderer();
 }

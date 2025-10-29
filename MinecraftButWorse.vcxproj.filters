@@ -7,14 +7,8 @@
     <Filter Include="Source\Shaders">
       <UniqueIdentifier>{30ec921b-4b5e-4a88-84e0-074d1a0d0e5a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Shaders\Utils">
-      <UniqueIdentifier>{29cd5505-6e1f-4c81-93ee-ecf6da92015c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\Window">
       <UniqueIdentifier>{0588d5aa-24e8-4abf-8a9f-20501eb62d03}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\ResourceManager">
-      <UniqueIdentifier>{48ee8c75-57aa-46af-af07-dca8b4cc7051}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Renderer">
       <UniqueIdentifier>{011d89ce-c323-4187-bc03-d249999fa7ca}</UniqueIdentifier>
@@ -31,13 +25,25 @@
     <Filter Include="Source\Game">
       <UniqueIdentifier>{1642b3e2-6fb1-43bb-ad4e-558e2190f2b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Shaders\OpenGL">
+      <UniqueIdentifier>{d663704c-b8c7-4e5b-892d-e65e84e8d643}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Shaders\OpenGL\Utils">
+      <UniqueIdentifier>{29cd5505-6e1f-4c81-93ee-ecf6da92015c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ResourceManager">
+      <UniqueIdentifier>{48ee8c75-57aa-46af-af07-dca8b4cc7051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ResourceManager\Types">
+      <UniqueIdentifier>{6645dd48-c064-485d-b641-e49f2324a93e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ResourceManager\BaseFileManager">
+      <UniqueIdentifier>{e5e44d5c-eaf3-47ea-b4a5-5bc5abe448c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp">
       <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Shaders\Utils\Shader.cpp">
-      <Filter>Source\Shaders\Utils</Filter>
     </ClCompile>
     <ClCompile Include="Source\Window\Input.cpp">
       <Filter>Source\Window</Filter>
@@ -45,26 +51,11 @@
     <ClCompile Include="Source\Window\Window.cpp">
       <Filter>Source\Window</Filter>
     </ClCompile>
-    <ClCompile Include="Source\ResourceManager\AudioFile.cpp">
-      <Filter>Source\ResourceManager</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\ResourceManager\Image.cpp">
-      <Filter>Source\ResourceManager</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\ResourceManager\Model.cpp">
-      <Filter>Source\ResourceManager</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\ResourceManager\ResourceManager.cpp">
-      <Filter>Source\ResourceManager</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Renderer\RenderManager.cpp">
       <Filter>Source\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="Source\Renderer\OpenGL\OpenGLRenderer.cpp">
       <Filter>Source\Renderer\OpenGL</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\ResourceManager\SaveFileManager.cpp">
-      <Filter>Source\ResourceManager</Filter>
     </ClCompile>
     <ClCompile Include="Source\Renderer\AbstractRenderer\AbstractRenderer.cpp">
       <Filter>Source\Renderer\AbstractRenderer</Filter>
@@ -72,36 +63,40 @@
     <ClCompile Include="Source\Game\GameManager.cpp">
       <Filter>Source\Game</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Shaders\OpenGL\Utils\Shader.cpp">
+      <Filter>Source\Shaders\OpenGL\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\GameObject.cpp">
+      <Filter>Source\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\GameScene.cpp">
+      <Filter>Source\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ResourceManager\ResourceManager.cpp">
+      <Filter>Source\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ResourceManager\Types\AudioFileManager.cpp">
+      <Filter>Source\ResourceManager\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ResourceManager\Types\ImageFileManager.cpp">
+      <Filter>Source\ResourceManager\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ResourceManager\Types\ModelFileManager.cpp">
+      <Filter>Source\ResourceManager\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ResourceManager\Types\SaveFileManager.cpp">
+      <Filter>Source\ResourceManager\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ResourceManager\BaseFileManager\BaseFileManager.cpp">
+      <Filter>Source\ResourceManager\BaseFileManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Source\Shaders\SimpleFragmentShader.frag">
-      <Filter>Source\Shaders</Filter>
-    </None>
-    <None Include="Source\Shaders\SimpleVertexShader.vert">
-      <Filter>Source\Shaders</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Source\Shaders\Utils\Shader.hpp">
-      <Filter>Source\Shaders\Utils</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Window\Input.hpp">
       <Filter>Source\Window</Filter>
     </ClInclude>
     <ClInclude Include="Source\Window\Window.hpp">
       <Filter>Source\Window</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\ResourceManager\AudioFile.hpp">
-      <Filter>Source\ResourceManager</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\ResourceManager\Image.hpp">
-      <Filter>Source\ResourceManager</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\ResourceManager\Model.hpp">
-      <Filter>Source\ResourceManager</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\ResourceManager\ResourceManager.hpp">
-      <Filter>Source\ResourceManager</Filter>
     </ClInclude>
     <ClInclude Include="Source\Renderer\RenderManager.hpp">
       <Filter>Source\Renderer</Filter>
@@ -109,14 +104,46 @@
     <ClInclude Include="Source\Renderer\OpenGL\OpenGLRenderer.hpp">
       <Filter>Source\Renderer\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="Source\ResourceManager\SaveFileManager.hpp">
-      <Filter>Source\ResourceManager</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Renderer\AbstractRenderer\AbstractRenderer.hpp">
       <Filter>Source\Renderer\AbstractRenderer</Filter>
     </ClInclude>
     <ClInclude Include="Source\Game\GameManager.hpp">
       <Filter>Source\Game</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Shaders\OpenGL\Utils\Shader.hpp">
+      <Filter>Source\Shaders\OpenGL\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\GameObject.hpp">
+      <Filter>Source\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\GameScene.hpp">
+      <Filter>Source\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ResourceManager\ResourceManager.hpp">
+      <Filter>Source\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ResourceManager\Types\AudioFileManager.hpp">
+      <Filter>Source\ResourceManager\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ResourceManager\Types\ImageFileManager.hpp">
+      <Filter>Source\ResourceManager\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ResourceManager\Types\ModelFileManager.hpp">
+      <Filter>Source\ResourceManager\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ResourceManager\Types\SaveFileManager.hpp">
+      <Filter>Source\ResourceManager\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ResourceManager\BaseFileManager\BaseFileManager.hpp">
+      <Filter>Source\ResourceManager\BaseFileManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Shaders\OpenGL\SimpleFragmentShader.frag">
+      <Filter>Source\Shaders\OpenGL</Filter>
+    </None>
+    <None Include="Source\Shaders\OpenGL\SimpleVertexShader.vert">
+      <Filter>Source\Shaders\OpenGL</Filter>
+    </None>
   </ItemGroup>
 </Project>

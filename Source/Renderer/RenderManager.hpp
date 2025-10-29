@@ -8,6 +8,6 @@ public:
 	AbstractRenderer* currentRenderer = nullptr;
 
 	RenderManager(RenderAPI renderApi = RenderAPI::OpenGL);
-	void renderFrame(double deltaTime, GameManager& gameManager);
 	~RenderManager();
+	void renderFrame(double deltaTime, GameManager& gameManager);
 };
