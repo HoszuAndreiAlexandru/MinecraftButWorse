@@ -1,8 +1,6 @@
 #pragma once
+#include "pch.h"
 #include "RenderManager.hpp"
-#include <stdexcept>
-
-#include "OpenGL/OpenGLRenderer.hpp"
 
 using namespace std;
 

@@ -1,4 +1,5 @@
 #pragma once
+#include "pch.h"
 #include "BaseFileManager.hpp"
 
 #pragma region String File I/O

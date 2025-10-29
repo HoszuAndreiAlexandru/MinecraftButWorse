@@ -90,6 +90,9 @@
     <ClCompile Include="Source\ResourceManager\BaseFileManager\BaseFileManager.cpp">
       <Filter>Source\ResourceManager\BaseFileManager</Filter>
     </ClCompile>
+    <ClCompile Include="Source\pch.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Window\Input.hpp">
@@ -136,6 +139,9 @@
     </ClInclude>
     <ClInclude Include="Source\ResourceManager\BaseFileManager\BaseFileManager.hpp">
       <Filter>Source\ResourceManager\BaseFileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\pch.h">
+      <Filter>Source</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

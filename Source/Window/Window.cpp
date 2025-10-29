@@ -1,11 +1,6 @@
 #pragma once
-
-#include <string>
-
-#include "glfw\glfw3.h"
-
+#include "pch.h"
 #include "Window.hpp"
-
 
 Window::Window(const char* windowTitle, int windowWidth, int windowHeight)
 {

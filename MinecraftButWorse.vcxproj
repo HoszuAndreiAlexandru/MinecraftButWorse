@@ -15,6 +15,9 @@
     <ClCompile Include="Source\Game\GameObject.cpp" />
     <ClCompile Include="Source\Game\GameScene.cpp" />
     <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Source\Renderer\AbstractRenderer\AbstractRenderer.cpp" />
     <ClCompile Include="Source\Renderer\OpenGL\OpenGLRenderer.cpp" />
     <ClCompile Include="Source\Renderer\RenderManager.cpp" />
@@ -32,6 +35,7 @@
     <ClInclude Include="Source\Game\GameManager.hpp" />
     <ClInclude Include="Source\Game\GameObject.hpp" />
     <ClInclude Include="Source\Game\GameScene.hpp" />
+    <ClInclude Include="Source\pch.h" />
     <ClInclude Include="Source\Renderer\AbstractRenderer\AbstractRenderer.hpp" />
     <ClInclude Include="Source\Renderer\OpenGL\OpenGLRenderer.hpp" />
     <ClInclude Include="Source\Renderer\RenderManager.hpp" />
@@ -83,7 +87,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(ProjectDir)Build\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)Build\Intermediate\$(Configuration)\</IntDir>
-    <IncludePath>$(ProjectDir)Externals\include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)Externals\include\;$(ProjectDir)Source\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -93,6 +97,8 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

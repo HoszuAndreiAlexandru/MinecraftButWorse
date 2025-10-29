@@ -1,22 +1,8 @@
 #pragma once
-// Include standard headers
-#include <stdio.h>
-#include <stdlib.h>
-#include <iostream>
+#include "pch.h"
 
-// Include GLEW and GLFW
-#include "glew/glew.h"
-#include "glfw/glfw3.h"
-
-// Include GLM
-#include "glm/glm.hpp"
-#include "glm/gtc/matrix_transform.hpp"
-#include "glm/gtc/type_ptr.hpp"
-
-// Include our logic
 #include "Window/Window.hpp"
 #include "Renderer/RenderManager.hpp"
-#include <chrono>
 
 int main(void)
 {

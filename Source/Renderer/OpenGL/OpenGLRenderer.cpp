@@ -1,4 +1,5 @@
 #pragma once
+#include "pch.h"
 #include "OpenGLRenderer.hpp"
 
 void OpenGLRenderer::initialize()

@@ -1,10 +1,4 @@
 #pragma once
-#include <string>
-#include <vector>
-#include <fstream>
-#include <sstream>
-#include <filesystem>
-
 namespace fs = std::filesystem;
 
 class BaseFileManager {
