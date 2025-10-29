@@ -102,10 +102,7 @@
       <IgnoreSpecificDefaultLibraries>msvcrt</IgnoreSpecificDefaultLibraries>
     </Link>
     <PreBuildEvent>
-      <Command>copy "$(ProjectDir)Externals\include\freeglut\freeglut.dll" "$(ProjectDir)Build\$(ConfigurationName)"
-copy "$(ProjectDir)Externals\include\glew\glew32.dll" "$(ProjectDir)\Build\$(ConfigurationName)"
-copy "$(ProjectDir)Externals\bin\soft_oal.dll" "$(ProjectDir)\Build\$(ConfigurationName)soft_oal.dll"
-copy "$(ProjectDir)Externals\bin\assimp-vc143-mt.dll" "$(ProjectDir)\Build\$(ConfigurationName)assimp-vc143-mt.dll"
+      <Command>copy "$(ProjectDir)Externals\bin\*" "$(ProjectDir)Build\$(ConfigurationName)"
 </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
