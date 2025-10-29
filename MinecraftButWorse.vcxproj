@@ -97,7 +97,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)Externals\libs</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;freeglut.lib;glew32.lib;glfw3.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;freeglut.lib;glew32.lib;glfw3.lib;OpenAL32.lib;assimp-vc143-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <TargetMachine>NotSet</TargetMachine>
       <IgnoreSpecificDefaultLibraries>msvcrt</IgnoreSpecificDefaultLibraries>
     </Link>
@@ -105,6 +105,7 @@
       <Command>copy "$(ProjectDir)Externals\include\freeglut\freeglut.dll" "$(ProjectDir)Build\$(ConfigurationName)"
 copy "$(ProjectDir)Externals\include\glew\glew32.dll" "$(ProjectDir)\Build\$(ConfigurationName)"
 copy "$(ProjectDir)Externals\bin\soft_oal.dll" "$(ProjectDir)\Build\$(ConfigurationName)soft_oal.dll"
+copy "$(ProjectDir)Externals\bin\assimp-vc143-mt.dll" "$(ProjectDir)\Build\$(ConfigurationName)assimp-vc143-mt.dll"
 </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
