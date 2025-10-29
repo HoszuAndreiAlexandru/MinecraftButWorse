@@ -25,6 +25,12 @@
     <Filter Include="Resources">
       <UniqueIdentifier>{34a7232d-52ff-491d-818c-207bfe53472c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Renderer\AbstractRenderer">
+      <UniqueIdentifier>{d21ae0c0-ee75-4ca9-8159-5848e514678b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game">
+      <UniqueIdentifier>{1642b3e2-6fb1-43bb-ad4e-558e2190f2b8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp">
@@ -59,6 +65,12 @@
     </ClCompile>
     <ClCompile Include="Source\ResourceManager\SaveFileManager.cpp">
       <Filter>Source\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\AbstractRenderer\AbstractRenderer.cpp">
+      <Filter>Source\Renderer\AbstractRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\GameManager.cpp">
+      <Filter>Source\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +111,12 @@
     </ClInclude>
     <ClInclude Include="Source\ResourceManager\SaveFileManager.hpp">
       <Filter>Source\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\AbstractRenderer\AbstractRenderer.hpp">
+      <Filter>Source\Renderer\AbstractRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\GameManager.hpp">
+      <Filter>Source\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

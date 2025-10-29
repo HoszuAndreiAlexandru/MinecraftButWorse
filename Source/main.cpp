@@ -1,83 +1,50 @@
+#pragma once
 // Include standard headers
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
 
 // Include GLEW and GLFW
-#include "glew\glew.h"
-#include "glfw\glfw3.h"
+#include "glew/glew.h"
+#include "glfw/glfw3.h"
 
 // Include GLM
-#include "glm\glm.hpp"
-#include "glm\gtc\matrix_transform.hpp"
-#include "glm\gtc\type_ptr.hpp"
+#include "glm/glm.hpp"
+#include "glm/gtc/matrix_transform.hpp"
+#include "glm/gtc/type_ptr.hpp"
 
-// Include util for compiling and loading shaders
-#include "Shaders\Utils\Shader.hpp"
-
-// "Global" variables
-GLFWwindow* window;
-const int width = 1280, height = 720;
-
-void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
-{
-	std::cout << "The mouse cursor is: " << xpos << " " << ypos << std::endl;
-}
-
-void window_callback(GLFWwindow* window, int new_width, int new_height)
-{
-	
-}
+// Include our logic
+#include "Window/Window.hpp"
+#include "Renderer/RenderManager.hpp"
+#include <chrono>
 
 int main(void)
 {
-	if (!glfwInit())
+	Window* window = new Window("OpenGL Window", 1280, 720);
+	GameManager* gameManager = new GameManager();
+	RenderManager* renderManager = new RenderManager();
+
+	gameManager->loadInitialScene();
+
+	using clock = std::chrono::high_resolution_clock;
+	auto lastTime = clock::now();
+
+	while (!glfwWindowShouldClose(window->glfwWindow))
 	{
-		fprintf(stderr, "Failed to initialize GLFW\n");
-		(void)getchar();
-		return -1;
-	}
+		auto currentTime = clock::now();
+		std::chrono::duration<double> elapsed = currentTime - lastTime;
+		lastTime = currentTime;
+		double deltaTime = elapsed.count();
 
-	window = glfwCreateWindow(width, height, "Minecraft but worse", NULL, NULL);
-	if (window == NULL)
-	{
-		fprintf(stderr, "Failed to open GLFW window.");
-		(void)getchar();
-		glfwTerminate();
-		return -1;
-	}
-
-	glfwMakeContextCurrent(window);
-
-	glewExperimental = true;
-	if (glewInit() != GLEW_OK)
-	{
-		fprintf(stderr, "Failed to initialize GLEW\n");
-		(void)getchar();
-		glfwTerminate();
-		return -1;
-	}
-
-	glViewport(0, 0, width, height);
-
-	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
-
-	GLuint programID = LoadShaders("SimpleVertexShader", "SimpleFragmentShader");
-
-	glfwSetFramebufferSizeCallback(window, window_callback);
-
-	while (!glfwWindowShouldClose(window))
-	{
-		glfwSwapBuffers(window);
+		glfwSwapBuffers(window->glfwWindow);
 		glfwPollEvents();
-		glClear(GL_COLOR_BUFFER_BIT);
-		glUseProgram(programID);
+		gameManager->updateCurrentSceneLogic(deltaTime);
+		renderManager->renderFrame(deltaTime, *gameManager);
 	}
 
-	glDeleteProgram(programID);
-
-	glfwTerminate();
+	delete renderManager;
+	delete gameManager;
+	delete window;
 
 	return 0;
 }

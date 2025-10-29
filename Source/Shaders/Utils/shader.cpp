@@ -1,19 +1,5 @@
-// Include standard headers
 #pragma once
-#include <stdio.h>
-#include <string>
-#include <vector>
-#include <iostream>
-#include <fstream>
-#include <algorithm>
-#include <stdlib.h>
-#include <string.h>
-#include <sstream>
-
-using namespace std;
-
-// Include GLEW
-#include "glew\glew.h"
+#include "Shader.hpp"
 
 namespace ShaderUtils
 {
