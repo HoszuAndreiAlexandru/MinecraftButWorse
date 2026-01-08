@@ -40,12 +40,18 @@
     <Filter Include="Source\ResourceManager\BaseFileManager">
       <UniqueIdentifier>{e5e44d5c-eaf3-47ea-b4a5-5bc5abe448c0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Physics">
+      <UniqueIdentifier>{867ecfcc-7329-4e71-a8a8-d8c9679a140a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Audio">
+      <UniqueIdentifier>{5ad405b1-b5f1-4ca4-870c-6d6ff64d4845}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Window\Input.cpp">
+    <ClCompile Include="Source\Window\InputManager.cpp">
       <Filter>Source\Window</Filter>
     </ClCompile>
     <ClCompile Include="Source\Window\Window.cpp">
@@ -93,9 +99,15 @@
     <ClCompile Include="Source\pch.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Physics\PhysicsManager.cpp">
+      <Filter>Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Audio\AudioManager.cpp">
+      <Filter>Source\Audio</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Window\Input.hpp">
+    <ClInclude Include="Source\Window\InputManager.hpp">
       <Filter>Source\Window</Filter>
     </ClInclude>
     <ClInclude Include="Source\Window\Window.hpp">
@@ -142,6 +154,12 @@
     </ClInclude>
     <ClInclude Include="Source\pch.h">
       <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Physics\PhysicsManager.hpp">
+      <Filter>Source\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Audio\AudioManager.hpp">
+      <Filter>Source\Audio</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

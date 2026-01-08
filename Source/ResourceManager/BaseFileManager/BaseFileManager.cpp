@@ -2,27 +2,52 @@
 #include "pch.h"
 #include "BaseFileManager.hpp"
 
+#pragma region Base file stream handlers
+void BaseFileManager::throwFileException(std::string filePath, StreamType streamAction)
+{
+	std::string streamActionStr = (streamAction == StreamType::READ) ? "read" : "write";
+	throw std::runtime_error("Failed to " + streamActionStr + " file : " + filePath);
+}
+
+template<typename Stream>
+void BaseFileManager::checkFileStream(const Stream& file, std::string filePath, StreamType type)
+{
+	if (!file.is_open())
+	{
+		this->throwFileException(filePath, type);
+	}
+}
+
+std::ifstream BaseFileManager::readFileStream(std::string filePath, std::ios::openmode mode)
+{
+	std::ifstream file(filePath, mode);
+
+	checkFileStream(file, filePath, StreamType::READ);
+
+	return file;
+}
+
+std::ofstream BaseFileManager::writeFileStream(std::string filePath, std::ios::openmode mode)
+{
+	std::ofstream file(filePath, mode);
+
+	checkFileStream(file, filePath, StreamType::WRITE);
+
+	return file;
+}
+#pragma endregion
+
 #pragma region String File I/O
 void BaseFileManager::readFileAsString(std::string filePath, std::string& output)
 {
-	std::ifstream file(filePath, std::ios::binary);
-
-	if (!file)
-	{
-		throw std::runtime_error("Cannot open file : " + std::string(filePath));
-	}
+	std::ifstream file = this->readFileStream(filePath, std::ios::binary);
 
 	output.assign((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
 }
 
 void BaseFileManager::writeStringAsFile(std::string filePath, std::string fileContent)
 {
-	std::ofstream file(filePath, std::ios::out);
-
-	if (!file.is_open())
-	{
-		throw std::runtime_error("Failed to open file for writing: " + filePath);
-	}
+	std::ofstream file = this->writeFileStream(filePath, std::ios::out);
 
 	file << fileContent;
 }
@@ -31,12 +56,7 @@ void BaseFileManager::writeStringAsFile(std::string filePath, std::string fileCo
 #pragma region Binary File I/O
 void BaseFileManager::readFileAsBinary(std::string filePath, std::vector<char>& output)
 {
-	std::ifstream file(filePath, std::ios::binary);
-
-	if (!file.is_open())
-	{
-		throw std::runtime_error("Failed to open binary file for reading: " + filePath);
-	}
+	std::ifstream file = this->readFileStream(filePath, std::ios::binary);
 
 	file.seekg(0, std::ios::end);
 	std::streamsize size = file.tellg();
@@ -48,12 +68,7 @@ void BaseFileManager::readFileAsBinary(std::string filePath, std::vector<char>& 
 
 void BaseFileManager::writeBinaryAsFile(std::string filePath, const std::vector<char>& data)
 {
-	std::ofstream file(filePath, std::ios::binary);
-
-	if (!file.is_open())
-	{
-		throw std::runtime_error("Failed to open binary file for writing: " + filePath);
-	}
+	std::ofstream file = this->writeFileStream(filePath, std::ios::binary);
 
 	file.write(data.data(), data.size());
 }

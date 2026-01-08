@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Audio\AudioManager.cpp" />
     <ClCompile Include="Source\Game\GameManager.cpp" />
     <ClCompile Include="Source\Game\GameObject.cpp" />
     <ClCompile Include="Source\Game\GameScene.cpp" />
@@ -18,6 +19,7 @@
     <ClCompile Include="Source\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Source\Physics\PhysicsManager.cpp" />
     <ClCompile Include="Source\Renderer\AbstractRenderer\AbstractRenderer.cpp" />
     <ClCompile Include="Source\Renderer\OpenGL\OpenGLRenderer.cpp" />
     <ClCompile Include="Source\Renderer\RenderManager.cpp" />
@@ -28,14 +30,16 @@
     <ClCompile Include="Source\ResourceManager\Types\ModelFileManager.cpp" />
     <ClCompile Include="Source\ResourceManager\Types\SaveFileManager.cpp" />
     <ClCompile Include="Source\Shaders\OpenGL\Utils\Shader.cpp" />
-    <ClCompile Include="Source\Window\Input.cpp" />
+    <ClCompile Include="Source\Window\InputManager.cpp" />
     <ClCompile Include="Source\Window\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Audio\AudioManager.hpp" />
     <ClInclude Include="Source\Game\GameManager.hpp" />
     <ClInclude Include="Source\Game\GameObject.hpp" />
     <ClInclude Include="Source\Game\GameScene.hpp" />
     <ClInclude Include="Source\pch.h" />
+    <ClInclude Include="Source\Physics\PhysicsManager.hpp" />
     <ClInclude Include="Source\Renderer\AbstractRenderer\AbstractRenderer.hpp" />
     <ClInclude Include="Source\Renderer\OpenGL\OpenGLRenderer.hpp" />
     <ClInclude Include="Source\Renderer\RenderManager.hpp" />
@@ -46,7 +50,7 @@
     <ClInclude Include="Source\ResourceManager\Types\ModelFileManager.hpp" />
     <ClInclude Include="Source\ResourceManager\Types\SaveFileManager.hpp" />
     <ClInclude Include="Source\Shaders\OpenGL\Utils\Shader.hpp" />
-    <ClInclude Include="Source\Window\Input.hpp" />
+    <ClInclude Include="Source\Window\InputManager.hpp" />
     <ClInclude Include="Source\Window\Window.hpp" />
   </ItemGroup>
   <ItemGroup>

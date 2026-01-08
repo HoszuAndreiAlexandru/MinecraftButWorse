@@ -4,4 +4,6 @@ class GameScene {
 public:
 	GameScene();
 	~GameScene();
+
+	void updateLogic(double deltaTime);
 };

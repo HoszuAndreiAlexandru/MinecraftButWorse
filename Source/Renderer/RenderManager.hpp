@@ -9,5 +9,6 @@ public:
 
 	RenderManager(RenderAPI renderApi = RenderAPI::OpenGL);
 	~RenderManager();
+
 	void renderFrame(double deltaTime, GameManager& gameManager);
 };

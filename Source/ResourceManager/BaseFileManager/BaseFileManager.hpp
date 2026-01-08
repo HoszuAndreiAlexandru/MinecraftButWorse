@@ -1,7 +1,20 @@
 #pragma once
 namespace fs = std::filesystem;
 
+enum StreamType {
+	READ,
+	WRITE
+};
+
 class BaseFileManager {
+private:
+	#pragma region Base file stream handlers
+	void throwFileException(std::string filePath, StreamType streamType);
+	template<typename Stream>
+	void checkFileStream(const Stream& file, std::string filePath, StreamType type);
+	std::ifstream readFileStream(std::string filePath, std::ios::openmode mode);
+	std::ofstream writeFileStream(std::string filePath, std::ios::openmode mode);
+	#pragma endregion
 public:
 	BaseFileManager() = default;
 	~BaseFileManager() = default;
