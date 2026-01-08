@@ -2,8 +2,11 @@
 
 class GameScene {
 public:
+
+
 	GameScene();
 	~GameScene();
 
-	void updateLogic(double deltaTime);
+	void update(double deltaTime);
+	void handleInput();
 };

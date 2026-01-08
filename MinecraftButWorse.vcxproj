@@ -50,6 +50,9 @@
     <ClInclude Include="Source\ResourceManager\Types\ModelFileManager.hpp" />
     <ClInclude Include="Source\ResourceManager\Types\SaveFileManager.hpp" />
     <ClInclude Include="Source\Shaders\OpenGL\Utils\Shader.hpp" />
+    <ClInclude Include="Source\UI\UIElement.hpp" />
+    <ClInclude Include="Source\UI\UIManager.hpp" />
+    <ClInclude Include="Source\UI\UIPage.hpp" />
     <ClInclude Include="Source\Window\InputManager.hpp" />
     <ClInclude Include="Source\Window\Window.hpp" />
   </ItemGroup>

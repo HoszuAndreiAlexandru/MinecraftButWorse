@@ -46,6 +46,15 @@
     <Filter Include="Source\Audio">
       <UniqueIdentifier>{5ad405b1-b5f1-4ca4-870c-6d6ff64d4845}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\UI">
+      <UniqueIdentifier>{ae68740e-e496-4b33-aa96-c43322ff4c3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\UI\Pages">
+      <UniqueIdentifier>{db89d7ea-c786-4053-8c6e-81d8f198ab08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\UI\Elements">
+      <UniqueIdentifier>{889b20ad-3ebb-43d6-8e5b-9ec33df1b563}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp">
@@ -160,6 +169,15 @@
     </ClInclude>
     <ClInclude Include="Source\Audio\AudioManager.hpp">
       <Filter>Source\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UI\UIPage.hpp">
+      <Filter>Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UI\UIManager.hpp">
+      <Filter>Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UI\UIElement.hpp">
+      <Filter>Source\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

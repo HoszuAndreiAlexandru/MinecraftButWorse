@@ -17,13 +17,22 @@ void GameManager::updateCurrentSceneLogic(double deltaTime)
 	// Interpret input state and all input events
 	inputManager->update();
 
-	// Update all current scene physics
-	physicsManager->stepSimulation(deltaTime);
+	// Update UI elements
+	uiManager->update(deltaTime);
 
-	// Update all game objects logic
-	currentScene->updateLogic(deltaTime);
+	// If UI does not block scene input, handle scene input
+	if (!uiManager->blocksSceneInput())
+	{
+		currentScene->handleInput();
+	}
 
-	// Handle audio updates
+	// If UI does not block scene update, update scene logic
+	if (!uiManager->blocksSceneUpdate())
+	{
+		physicsManager->stepSimulation(deltaTime);
+		currentScene->update(deltaTime);
+	}
+
 	audioManager->update(deltaTime);
 }
 
@@ -31,20 +40,23 @@ void GameManager::unloadCurrentScene()
 {
 	if (!currentScene) return;
 	// Clean up current scene resources
-	delete currentScene;
-	currentScene = nullptr;
+
 }
 
 void GameManager::loadInitialScene()
 {
-	unloadCurrentScene();
-	// Load the intro scene
+	// Loads the first scene (main menu)
+
+	// Delete all current scene resources
+	this->unloadCurrentScene();
+
+	// Add UI + logic for main menu
 }
 
 void GameManager::loadScene(std::string sceneName)
 {
 	// Unload current scene
 	unloadCurrentScene();
-	// Load new scene by name
 
+	// Load new scene by its name
 }

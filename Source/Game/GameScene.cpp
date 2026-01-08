@@ -10,7 +10,12 @@ GameScene::~GameScene()
 {
 }
 
-void GameScene::updateLogic(double deltaTime)
+void GameScene::update(double deltaTime)
 {
 	// Trigger all game objects' update logic functions
+}
+
+void GameScene::handleInput()
+{
+	// Process gameplay input
 }
